@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amir ❤️ Rahaf</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="loveMusic" loop>
+    <source src="rahaf/loveuy.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- القلوب المتحركة -->
+    <div id="particles"></div>
+
+    <!-- =========================
+         شاشة الباسورد
+    ========================== -->
+
+    <section id="loginScreen" class="screen">
+
+        <div class="glass-card login-card">
+
+            <div class="big-heart">❤️</div>
+
+            <h1>
+                Amir ❤️ Rahaf
+            </h1>
+
+            <p>
+                في حاجة صغيرة معمولة مخصوص ليكي يا رهوفتي 💕
+            </p>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="اكتبي الباسورد ❤️"
+                autocomplete="off"
+            >
+
+            <button onclick="checkPassword()">
+                ادخل ي صغنن❤️
+            </button>
+
+            <p id="wrongPassword">
+                الباسورد غلط يا صغنن 😂❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         شاشة البداية
+    ========================== -->
+
+    <section id="welcomeScreen" class="screen hidden">
+
+        <div class="welcome-content">
+
+            <div class="floating-heart">
+                💗
+            </div>
+
+            <h1>
+                نورت ي صغنن❤️
+            </h1>
+
+            <p>
+                الرسالة دي ليكي إنتي وبس...
+            </p>
+
+            <button onclick="startLove()">
+                ادخلي يا أجمل بنوتة ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         الموقع الرئيسي
+    ========================== -->
+
+    <main id="mainSite" class="hidden">
+
+        <!-- =========================
+             المقدمة
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-heart">
+                ❤️
+            </div>
+
+            <h1>
+                Amir ❤️ Rahaf
+            </h1>
+
+            <p>
+                رسالة صغيرة من قلبي لرهوفتي 💕
+            </p>
+
+            <div class="scroll-hint">
+                ↓
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             الرسالة الأولى
+        ========================== -->
+
+        <section class="love-section">
+
+            <div class="glass-card message-card">
+
+                <div class="section-heart">
+                    💌
+                </div>
+
+                <div class="small-hearts">
+                    ❤️ 💕 ❤️
+                </div>
+
+                <h2>
+                    الرسالة ليكي يا رهوفتي
+                </h2>
+
+                <p class="main-message">
+                    ليكي إنتِ يا رهوفتي... ❤️
+                </p>
+
+                <p>
+                    لأنك مش مجرد حد في حياتي،
+                    إنتي حياتي و قلبي وروحي. 💗
+                </p>
+
+                <button onclick="nextMessage(this)">
+                   ي صغنن كملي الرسالة ❤️
+                </button>
+
+                <div class="hidden-message">
+
+                    <span>❤️</span>
+
+                    كل كلمة هنا معمولة مخصوص علشانك يا رهف.
+
+                    <br><br>
+
+                    <span>💕</span>
+
+                    وعلشانك تعرفي قد إيه إنتي روحي و غالية عندي.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             الرسالة الثانية
+        ========================== -->
+
+        <section class="love-section">
+
+            <div class="glass-card message-card">
+
+                <div class="section-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    حقك عليا يا رهف
+                </h2>
+
+                <p>
+                    عارف إن أنا بزعلك كتير يا رهف...
+                </p>
+
+                <p>
+                    بس والله العظيم ماليش غيرك في الدنيا،
+                    أنا عايش علشانك أصلًا. ❤️
+                </p>
+
+                <button onclick="nextMessage(this)">
+                    افتحي باقي كلامي ي صغنن💗
+                </button>
+
+                <div class="hidden-message">
+
+                    حقك عليا يا ست البنات،
+                    يا أجمل وأحلى بنوتة في الدنيا. 👑❤️
+
+                    <br><br>
+
+                    وربنا يخليكي ليا،
+                    وما يحرمنيش منك أبدًا يا روحي. ❤️
+
+                    <br><br>
+
+                    <span class="heart-line">
+                        ❤️ ❤️ ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             الرسالة الثالثة
+        ========================== -->
+
+        <section class="love-section">
+
+            <div class="glass-card message-card special-card">
+
+                <div class="section-heart">
+                    💖
+                </div>
+
+                <div class="heart-line">
+                    ❤️ 💕 ❤️ 💕 ❤️
+                </div>
+
+                <h2>
+                    عايزك معايا دايمًا
+                </h2>
+
+                <p class="big-love-text">
+                    بحبك يا رهوفتي ❤️
+                </p>
+
+                <p>
+                    وعايزك معايا دايمًا،
+                    في كل أيامي وكل لحظاتي.
+                </p>
+
+                <p>
+                    وجودك جنبي هو أكتر حاجة بتفرح قلبي. 💕
+                </p>
+
+                <button onclick="heartExplosion()">
+                    اضغطي هنا يا روحي ❤️
+                </button>
+
+                <p id="heartCounter">
+                    اضغطي هنا ي صغنن❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             الرسالة الأخيرة
+        ========================== -->
+
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <div class="final-heart">
+                    ❤️
+                </div>
+
+                <div class="heart-line">
+                    💕 ❤️ 💕
+                </div>
+
+                <h1>
+                    Amir ❤️ Rahaf
+                </h1>
+
+                <p>
+                    وفي الآخر...
+                </p>
+
+                <p class="final-love">
+                    بحبك أوي أوي أوي
+                </p>
+
+                <p class="little">
+                    يا صغنن ❤️
+                </p>
+
+                <p>
+                    وربنا يخليكي ليا وما يحرمنيش منك أبدًا. ❤️
+                </p>
+
+                <button onclick="finalLove()">
+                    آخر حاجة ليكي ❤️
+                </button>
+
+                <div id="finalMessage" class="final-hidden">
+
+                    <div class="final-big-heart">
+                        ❤️
+                    </div>
+
+                    <p>
+                        إنتي  حبيبتي،
+                        وأجمل حاجة في حياتي. 💕
+                    </p>
+
+                    <p>
+                        بحبك يا رهوفتي
+                    </p>
+
+                    <p>
+                        — Amir ❤️
+                    </p>
+
+                    <div class="heart-line">
+                        ❤️ 💗 ❤️ 💗 ❤️
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>

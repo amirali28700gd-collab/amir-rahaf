@@ -1,0 +1,744 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family:
+        "Tahoma",
+        "Arial",
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ff416c55,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #ff149355,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #090009,
+            #360014,
+            #100008
+        );
+}
+
+
+/* =========================
+   عام
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff174f,
+            #ff6b91
+        );
+
+    box-shadow:
+        0 10px 30px #ff174f55;
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+
+    box-shadow:
+        0 15px 40px #ff174f88;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+
+/* =========================
+   Glass
+========================= */
+
+.glass-card {
+    background:
+        rgba(255,255,255,.11);
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.45);
+}
+
+
+/* =========================
+   شاشة الباسورد
+========================= */
+
+.screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+#loginScreen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ff6b9d,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #100008,
+            #500019,
+            #100008
+        );
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 45px 30px;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    animation:
+        appear 1s ease;
+}
+
+.big-heart {
+    font-size: 75px;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.login-card h1 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.login-card p {
+    color: #ffe0e9;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.login-card button {
+    width: 100%;
+}
+
+#wrongPassword {
+    display: none;
+
+    color: #ffb4c6;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   شاشة الترحيب
+========================= */
+
+#welcomeScreen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 90;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ff376d55,
+            transparent 45%
+        ),
+        #100008;
+}
+
+.welcome-content {
+    text-align: center;
+
+    padding: 25px;
+
+    animation:
+        appear 1.2s ease;
+}
+
+.floating-heart {
+    font-size: 95px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.welcome-content h1 {
+    font-size:
+        clamp(38px, 9vw, 70px);
+
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    color: #ffd4df;
+
+    margin-bottom: 30px;
+
+    font-size: 19px;
+}
+
+
+/* =========================
+   البداية
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.hero-heart {
+    font-size: 105px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.hero h1 {
+    font-size:
+        clamp(48px, 11vw, 95px);
+
+    margin-top: 20px;
+
+    text-shadow:
+        0 0 25px #ff356d,
+        0 0 60px #ff356d;
+}
+
+.hero p {
+    margin-top: 20px;
+
+    font-size: 21px;
+
+    color: #ffd9e3;
+}
+
+.scroll-hint {
+    margin-top: 80px;
+
+    font-size: 35px;
+
+    animation:
+        bounce 1.5s infinite;
+}
+
+
+/* =========================
+   الرسائل
+========================= */
+
+.love-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.message-card {
+    width: 100%;
+
+    max-width: 700px;
+
+    padding: 50px 35px;
+
+    border-radius: 38px;
+
+    text-align: center;
+
+    animation:
+        appear 1s ease;
+}
+
+.section-heart {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.small-hearts {
+    letter-spacing: 7px;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+.message-card h2 {
+    font-size:
+        clamp(28px, 6vw, 42px);
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 0 20px #ff547b;
+}
+
+.message-card p {
+    color: #ffe5ec;
+
+    line-height: 2.1;
+
+    font-size: 19px;
+
+    margin-bottom: 18px;
+}
+
+.main-message {
+    font-size: 26px !important;
+
+    font-weight: bold;
+
+    color: white !important;
+}
+
+.message-card button {
+    margin-top: 20px;
+}
+
+.hidden-message {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 28px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.09);
+
+    color: #fff;
+
+    line-height: 2.2;
+
+    font-size: 19px;
+
+    animation:
+        appear .8s ease;
+}
+
+.heart-line {
+    margin: 18px 0;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+}
+
+.special-card {
+    box-shadow:
+        0 0 80px #ff174f22,
+        0 25px 70px rgba(0,0,0,.45);
+}
+
+.big-love-text {
+    font-size: 36px !important;
+
+    font-weight: bold;
+
+    color: #fff !important;
+
+    text-shadow:
+        0 0 20px #ff3d6d;
+}
+
+#heartCounter {
+    margin-top: 25px;
+
+    font-size: 16px !important;
+
+    color: #ffd6e0 !important;
+}
+
+
+/* =========================
+   النهاية
+========================= */
+
+.final-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.final-content {
+    max-width: 750px;
+}
+
+.final-heart {
+    font-size: 105px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.final-content h1 {
+    font-size:
+        clamp(45px, 10vw, 85px);
+
+    margin: 25px 0;
+
+    text-shadow:
+        0 0 30px #ff315f,
+        0 0 70px #ff315f;
+}
+
+.final-content p {
+    color: #ffe1e8;
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    margin-bottom: 10px;
+}
+
+.final-love {
+    font-size: 42px !important;
+
+    font-weight: bold;
+
+    color: white !important;
+
+    text-shadow:
+        0 0 25px #ff416c;
+}
+
+.little {
+    font-size: 32px !important;
+
+    font-weight: bold;
+
+    color: #ffb5c8 !important;
+}
+
+.final-content button {
+    margin-top: 25px;
+}
+
+.final-hidden {
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 35px 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.11);
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    backdrop-filter:
+        blur(15px);
+
+    animation:
+        appear .8s ease;
+}
+
+.final-hidden p {
+    font-size: 24px;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.final-big-heart {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+/* =========================
+   القلوب
+========================= */
+
+#particles {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+.heart-particle {
+    position: absolute;
+
+    bottom: -60px;
+
+    animation:
+        floatUp linear forwards;
+
+    opacity: .8;
+}
+
+.explosion-heart {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 200;
+
+    font-size: 28px;
+
+    animation:
+        explosion 1.5s ease-out forwards;
+}
+
+
+/* =========================
+   الحركات
+========================= */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(15px);
+    }
+}
+
+@keyframes floatUp {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes explosion {
+
+    from {
+        transform:
+            translate(0,0)
+            scale(.5);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translate(var(--x), var(--y))
+            scale(1.5);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   الموبايل
+========================= */
+
+@media (max-width: 600px) {
+
+    .login-card {
+        padding: 35px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 28px;
+    }
+
+    .message-card {
+        padding: 38px 20px;
+    }
+
+    .message-card p {
+        font-size: 17px;
+    }
+
+    .main-message {
+        font-size: 22px !important;
+    }
+
+    .big-love-text {
+        font-size: 30px !important;
+    }
+
+    .final-love {
+        font-size: 34px !important;
+    }
+
+    .little {
+        font-size: 27px !important;
+    }
+
+    .heart-line {
+        letter-spacing: 4px;
+    }
+}
