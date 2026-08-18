@@ -1,3 +1,8 @@
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 * {
     margin: 0;
     padding: 0;
@@ -740,5 +745,21 @@ button:active {
 
     .heart-line {
         letter-spacing: 4px;
+    }
+}
+@media (max-width: 600px) {
+
+    .heart-particle {
+        animation-duration: 8s !important;
+        will-change: transform;
+    }
+
+    .explosion-heart {
+        will-change: transform, opacity;
+    }
+
+    #particles {
+        overflow: hidden;
+        pointer-events: none;
     }
 }
