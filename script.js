@@ -181,16 +181,19 @@ function createHeart() {
     );
 
 }
-
+let heartsInterval;
 
 function createHearts() {
+    if (heartsInterval) return;
 
-    setInterval(
-        createHeart,
-        400
-    );
-
+    heartsInterval = setInterval(() => {
+        createHeart();
+    }, 1000);
 }
+
+
+
+
 
 
 /* =========================
@@ -215,7 +218,7 @@ function heartExplosion() {
 
     for (
         let i = 0;
-        i < 35;
+        i < 15;
         i++
     ) {
 
@@ -331,7 +334,7 @@ document.addEventListener(
 
             for (
                 let i = 0;
-                i < 7;
+                i < 3;
                 i++
             ) {
 
